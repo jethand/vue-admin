@@ -25,7 +25,6 @@
 import HeaderBar from './components/header-bar';
 import User from './components/user';
 import Fullscreen from './components/fullscreen';
-import { promiseCurry, fnPack } from '@/lib/utils';
 export default {
   data () {
     return {
@@ -38,16 +37,7 @@ export default {
   methods: {
     handleCollapsedChange () {
 
-    },
-    async testApi () {
-      const catcher = () => {
-        console.log('Error');
-      };
-      const requestRes = await promiseCurry(fnPack(_S.login, { userName: 'xx', password: '12345' }), catcher);
     }
-  },
-  beforeMount () {
-    this.testApi();
   },
   components: {
     HeaderBar,

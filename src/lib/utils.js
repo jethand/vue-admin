@@ -25,7 +25,7 @@ export const promiseCurry = (promise, catcher) => {
 export const fnPack = function (fn, ...args) {
   /**
    * @param {Function} fn
-   * @param {Object} params 异步函数执行需要的参数
+   * @param {Object} args 异步函数执行需要的参数
    */
   return () => {
     return fn(...args);

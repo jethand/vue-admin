@@ -1,26 +1,22 @@
 import env from './env';
-
-const port = 8000;
+import pk from '../package.json';
 var conf = {
-    version: '1.0.0',
-    env,
-    port,
-    host: env === 'development' ? `${location.protocol}//${location.hostname}:${port}` : location.origin,
-    prefix: '/v1'
+  version: pk.version,
+  env,
+  host: env === 'development' ? `${location.protocol}//${location.hostname}:${location.port}` : `${location.protocol}//${location.hostname}:${location.port}`,
+  prefix: '/v1'
 };
 
-
 class Config {
-    get(key, defaultVal){
-        if(conf.hasOwnProperty(key)) {
-            return conf[key];
-        }
-        return defaultVal;
+  get (key, defaultVal) {
+    if (conf.hasOwnProperty(key)) {
+      return conf[key];
     }
-    set(key, val){
-        conf[key] = val;
-    }
-}
+    return defaultVal;
+  }
+  set (key, val) {
+    conf[key] = val;
+  }
+};
 
 export default new Config();
-

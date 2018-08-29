@@ -13,44 +13,54 @@ const LoginRouter = [
 ];
 
 const ErrorRouters = [
-    {
-        path: '/401',
-        name: 'error_401',
-        meta: {
-        },
-        component: () => import('@/views/errorPage/401.vue')
+  {
+    path: '/401',
+    name: 'error_401',
+    meta: {
     },
-    {
-        path: '/500',
-        name: 'error_500',
-        meta: {
-        },
-        component: () => import('@/views/errorPage/500.vue')
+    component: () => import('@/views/errorPage/401.vue')
+  },
+  {
+    path: '/500',
+    name: 'error_500',
+    meta: {
     },
-    {
-        path: '*',
-        name: 'error_404',
-        meta: {
-        },
-        component: () => import('@/views/errorPage/404.vue')
-    }
+    component: () => import('@/views/errorPage/500.vue')
+  },
+  {
+    path: '*',
+    name: 'error_404',
+    meta: {
+    },
+    component: () => import('@/views/errorPage/404.vue')
+  }
 ];
 const ViewsRouter = [
-    {
-        path: '/',
-        name: 'home',
+  {
+    path: '/',
+    name: 'home',
+    meta: {
+      title: '首页',
+    },
+    component: Main,
+    meta: {
+      notCache: true
+    },
+    children: [
+      {
+        path: '/test',
+        name: 'test',
         meta: {
-          title: '首页',
+          title: '测试',
         },
-        component: Main,
-        meta: {
-            notCache: true
-        },
-    }
+        component: () => import('@/views/test/test.vue')
+      }
+    ]
+  }
 ];
 export default [
-    ...LoginRouter,
-    ...ErrorRouters,
-    ...ViewsRouter
+  ...LoginRouter,
+  ...ErrorRouters,
+  ...ViewsRouter
 ];
 

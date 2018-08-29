@@ -12,15 +12,15 @@
 <script>
 import './header-bar.less';
 export default {
-    name: 'HeaderBar',
-    components: {
-    },
-    props: {
-        collapsed: Boolean
-    },
-    computed: {
-    },
-    methods: {
-    }
+  name: 'HeaderBar',
+  components: {
+  },
+  props: {
+    collapsed: Boolean
+  },
+  computed: {
+  },
+  methods: {
+  }
 };
 </script>
