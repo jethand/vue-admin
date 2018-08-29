@@ -1,15 +1,13 @@
 <template>
-    <div class="header-bar">
-        <Menu mode="horizontal" theme="dark" active-name="1">
-            <div class="header-title">Template</div>
-            <MenuItem name="xx">
-                <!-- <span>DASHBOARD</span> -->
-            </MenuItem>
-            <div class="custom-content-con">
-                <slot></slot>
-            </div>
-        </Menu>
-    </div>
+  <div class="header-bar">
+    <Menu mode="horizontal" theme="dark" active-name="1">
+      <div class="header-title">Template</div>
+      <MenuItem name="xx"/>
+      <div class="custom-content-con">
+        <slot></slot>
+      </div>
+    </Menu>
+  </div>
 </template>
 <script>
 import './header-bar.less';

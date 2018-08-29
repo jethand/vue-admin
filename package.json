@@ -19,6 +19,7 @@
     "@vue/cli-plugin-babel": "^3.0.1",
     "@vue/cli-plugin-eslint": "^3.0.1",
     "@vue/cli-service": "^3.0.1",
+    "@vue/eslint-config-standard": "^3.0.1",
     "iview-loader": "^1.2.1",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
