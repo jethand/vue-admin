@@ -19,3 +19,9 @@ npm run build
 ```
 npm run lint
 ```
+
+### Create new module
+```
+node --experimental-modules run.mjs moduleName
+```
+

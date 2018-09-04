@@ -2,14 +2,14 @@ import Main from '@/views/main/main';
 
 
 const LoginRouter = [
-    {
-        path: '/login',
-        name: 'login',
-        meta: {
-          title: 'Login - 登录',
-        },
-        component: () => import('@/views/login/index.vue')
-    }
+  {
+    path: '/login',
+    name: 'login',
+    meta: {
+      title: 'Login - 登录',
+    },
+    component: () => import('@/views/login/index.vue')
+  }
 ];
 
 const ErrorRouters = [

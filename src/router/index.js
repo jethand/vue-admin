@@ -4,13 +4,13 @@ import routes from './routers';
 
 Vue.use(Router);
 const router = new Router({
-    routes,
-    mode: 'history'
+  routes,
+  mode: 'history'
 });
 router.beforeEach((to, from, next) => {
-    next();
+  next();
 });
 router.afterEach(() => {
-    window.scrollTo(0, 0);
+  window.scrollTo(0, 0);
 });
 export default router;

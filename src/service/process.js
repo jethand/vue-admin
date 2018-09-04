@@ -1,5 +1,5 @@
 
-import routers from './routers';
+import routers from './routers/index';
 import config from '../../config/config';
 
 const Methods = {
@@ -35,21 +35,21 @@ const formMethod = curry(host, Methods.form, ContentTypes.form);
 
 let actions = {};
 routers && routers.forEach(route => {
-  switch (route[1]) {
+  switch (route[2]) {
     case 'post':
-      actions[route[2]] = postMethod(route[0], route[3]);
+      actions[route[1]] = postMethod(route[0], route[3]);
       break;
     case 'get':
-      actions[route[2]] = getMethod(route[0], route[3]);
+      actions[route[1]] = getMethod(route[0], route[3]);
       break;
     case 'delete':
-      actions[route[2]] = deleteMethod(route[0], route[3]);
+      actions[route[1]] = deleteMethod(route[0], route[3]);
       break;
     case 'put':
-      actions[route[2]] = putMethod(route[0], route[3]);
+      actions[route[1]] = putMethod(route[0], route[3]);
       break;
     case 'form':
-      actions[route[2]] = formMethod(route[0], route[3]);
+      actions[route[1]] = formMethod(route[0], route[3]);
       break;
   }
 });

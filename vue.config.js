@@ -1,5 +1,5 @@
 const path = require('path');
-const fs = require('fs');
+
 const BASE_URL = '/';
 const resolve = dir => {
   return path.join(__dirname, dir);

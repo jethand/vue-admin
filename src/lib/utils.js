@@ -10,7 +10,7 @@ export const formatUrl = (url, data) => {
 export const assert = (condition, fn) => {
   condition && typeof fn === 'function' && fn();
 };
-export const promiseCurry = (promise, catcher) => {
+export const promisePack = (promise, catcher) => {
   /**
    * @param { function } promise 执行的promise函数
    * @param { function } catcher 要执行的catch函数
