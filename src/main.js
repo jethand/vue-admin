@@ -10,6 +10,8 @@ import store from './store';
 
 import Service from './service';
 
+import './prototype';
+
 window._S = Service;
 
 Vue.config.productionTip = false;

@@ -24,7 +24,7 @@ module.exports = {
     'multiline-comment-style': 'off',
     'spaced-comment': 'off',
     'no-empty-pattern': 'off',
-    'handle-callback-err': 'off'
-
+    'handle-callback-err': 'off',
+    'no-extend-native': 'off'
   }
 };

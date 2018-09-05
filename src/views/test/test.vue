@@ -8,6 +8,7 @@
 </template>
 <script>
 import { promisePack, fnPack, bindProperty } from '@/lib/utils';
+import { before, after, around } from '@/lib/decorator';
 import data from './data';
 import Service from './service';
 import Actions from './actions';
@@ -17,6 +18,9 @@ export default {
     return data.call(this);
   },
   methods: {
+    @before()
+    @after()
+    @around()
     errorHandle () {
       // 一些共用的异常处理方案
     }

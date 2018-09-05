@@ -26,7 +26,7 @@ class Service {
       }
       return data;
     }, (error) => {
-      Message.error('服务内部错误');
+      Message.error('网络发生错误了！');
       return Promise.reject(error);
     });
   }

@@ -49,5 +49,4 @@ for (let action in actions) {
     new Error('Lack of request url');
   }
 }
-console.log(actionColleation);
 export default actionColleation;
