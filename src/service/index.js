@@ -23,9 +23,7 @@ const getApiInstance = (router) => {
   };
 };
 const setObject = (object, key) => {
-  if (!object[key]) {
-    object[key] = {};
-  }
+  object[key] = object[key] || {};
 };
 let namespaceName = null;
 for (let action in actions) {

@@ -10,6 +10,7 @@ module.exports = {
   chainWebpack: config => {
     config.resolve.alias
       .set('@', resolve('src'))
+      .set('_s', resolve('src/_service/modules'))
     config.plugin('html').tap(args => {
       args[0].favicon = './public/favicon.ico';
       return args;

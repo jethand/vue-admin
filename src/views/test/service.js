@@ -1,4 +1,5 @@
 import { promisePack, fnPack } from '@/lib/utils';
+import testApi from '_s/testApi';
 export default class {
   async getDataList () {
     const queryOption = {
@@ -10,5 +11,11 @@ export default class {
     if (res) {
       //可处理，亦可包装返回
     }
+  }
+  async test () {
+    testApi.getTestDataList({
+      testId: 101,
+      testName: 'zhangsan'
+    }).then(res => {});
   }
 };

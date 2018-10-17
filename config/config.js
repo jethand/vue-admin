@@ -4,7 +4,8 @@ var conf = {
   version: pk.version,
   env,
   host: env === 'development' ? `${location.protocol}//${location.hostname}:${location.port}` : `${location.protocol}//${location.hostname}:${location.port}`,
-  prefix: '/v1',
+  defaultPrefix: '/v1',
+  webSitPort: 8000,
   service: { 
     mode: 'module' // module：_S仅挂载模块路由; simple: _S直接挂载全量路由; full: _S不仅挂载模块路由，也挂载全量路由
   }

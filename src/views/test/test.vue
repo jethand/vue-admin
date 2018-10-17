@@ -18,9 +18,9 @@ export default {
     return data.call(this);
   },
   methods: {
-    @before()
+    /* @before()
     @after()
-    @around()
+    @around() */
     errorHandle () {
       // 一些共用的异常处理方案
     }
@@ -31,7 +31,8 @@ export default {
     bindProperty.call(this, Service);
     bindProperty.call(this, Tools);
     // 示例
-    this.getDataList();
+    //this.getDataList();
+    this.test();
   }
 };
 </script>
